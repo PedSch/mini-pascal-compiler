@@ -161,7 +161,7 @@ public final class Parser {
             for (Token var : variablesArrayList) {
                 Symbol symbol = new Symbol(var.getTokenValue(),
                         "A_VAR",
-                        STRING_TYPE_HASH_MAP.get(dataType.toLowerCase().substring(3)),
+                        STRING_TYPE_HASH_MAP.get(dataType.toLowerCase()),
                         dp);
 
                 dp += 4;
@@ -218,7 +218,7 @@ public final class Parser {
                             symbol.setHigh(i2);
                             symbol.setTokenType("AN_ARRAY");
                             symbol.setIndexType(TYPE.I);
-                            symbol.setValueType(STRING_TYPE_HASH_MAP.get(valueType.toLowerCase().substring(3)));
+                            symbol.setValueType(STRING_TYPE_HASH_MAP.get(valueType.toLowerCase()));
 
                             dp += size;
                         }
@@ -246,7 +246,7 @@ public final class Parser {
                             symbol.setHigh(c2);
                             symbol.setTokenType("AN_ARRAY");
                             symbol.setIndexType(TYPE.C);
-                            symbol.setValueType(STRING_TYPE_HASH_MAP.get(valueType.toLowerCase().substring(3)));
+                            symbol.setValueType(STRING_TYPE_HASH_MAP.get(valueType.toLowerCase()));
 
                             dp += size;
                         }
